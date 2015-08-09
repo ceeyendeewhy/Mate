@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Event title"/>
+    <EditText
+        android:id="@+id/description"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="wrap_content"
+        android:hint="Description"/>
+
+    <EditText
+        android:layout_gravity="center"
+        android:id="@+id/startTime"
+        android:onClick="setTime"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="wrap_content"
+        android:hint="Start time"/>
+
+    <EditText
+        android:layout_gravity="center"
+        android:id="@+id/endTime"
+        android:onClick="setTime"
+        android:layout_width="@dimen/edit_text_width"
+        android:layout_height="wrap_content"
+        android:hint="End time"/>
+
+    <Button
+        android:id="@+id/submitEvent"
+        android:text="@string/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:text="@string/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

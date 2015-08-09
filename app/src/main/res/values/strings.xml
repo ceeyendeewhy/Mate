@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Mate</string>
+    <string name="enter_name">Name</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_nickname">Nickname (optional)</string>
+    <string name="enter_birthday">Birthday</string>
+    <string name="add_new_home">Add new home</string>
+    <string name="join_existing_home">Join existing home</string>
+    <string name="date_label_set">Press the button to set the date</string>
+    <string name="date_button_set">Set Date</string>
+    <string name="date_view_set">The Date is: </string>
+    <string name="date_selected"></string>
+    <string name="title_activity_event_calendar">EventCalendar</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+
+
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome home, mate</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="btn_calendar">CALENDAR</string>
+    <string name="btn_bills">PAY BILLS</string>
+    <string name="name">Fullname</string>
+
+
+</resources>

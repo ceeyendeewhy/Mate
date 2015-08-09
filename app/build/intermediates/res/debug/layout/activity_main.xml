@@ -1,0 +1,153 @@
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--&lt;!&ndash;<DatePicker&ndash;&gt;-->
+    <!--&lt;!&ndash;android:datePickerMode="spinner"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:calendarViewShown="false"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/date_picker"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+    <!--&lt;!&ndash;</DatePicker>&ndash;&gt;-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/enter_name"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/enter_name"-->
+        <!--android:layout_gravity="center"/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/enter_nickname"-->
+        <!--android:layout_width="@dimen/edit_text_width"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/enter_nickname"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/enter_birthday"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="@dimen/edit_text_width"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="@string/enter_birthday"/>-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/addBtn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/add_new_home"-->
+            <!--android:onClick="addUser"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/joinBtn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/join_existing_home"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/calendar"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="goToCalendar"-->
+        <!--android:text="Calendar"/>-->
+
+    <!--<ListView-->
+        <!--android:id="@android:id/list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/joinBtn">-->
+    <!--</ListView>-->
+<!--</LinearLayout>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/lbl_name"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/joinExistingGroup"
+            android:layout_marginTop="40dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/join_existing_home"/>
+
+        <Button
+            android:id="@+id/createNewHome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_new_home"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:background="@color/btn_logut_bg"
+            android:text="@string/btn_logout"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnCalendar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_logut_bg"
+            android:text="@string/btn_calendar"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:onClick="goToCalendar"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnBills"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_logut_bg"
+            android:text="@string/btn_bills"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/app/src/main/res/layout/activity_main.xml -->
