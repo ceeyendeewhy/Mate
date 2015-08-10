@@ -50,13 +50,13 @@ public final class R {
 	}
 	public static final class string {
 		public static final int app_name = 0x7f060013;
-		public static final int friday = 0x7f060023;
-		public static final int monday = 0x7f060029;
-		public static final int saturday = 0x7f06002b;
-		public static final int sunday = 0x7f06002d;
-		public static final int thursday = 0x7f06002e;
-		public static final int tuesday = 0x7f060030;
-		public static final int wednesday = 0x7f060031;
+		public static final int friday = 0x7f060024;
+		public static final int monday = 0x7f06002a;
+		public static final int saturday = 0x7f06002c;
+		public static final int sunday = 0x7f06002e;
+		public static final int thursday = 0x7f06002f;
+		public static final int tuesday = 0x7f060031;
+		public static final int wednesday = 0x7f060032;
 	}
 	public static final class style {
 		public static final int AppBaseTheme = 0x7f080003;

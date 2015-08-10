@@ -136,9 +136,12 @@ public class LoginActivity extends Activity{
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
                         String email = user.getString("email");
+                        String group = user.getString("group");
                         String created_at = user.getString("created_at");
 
-                        db.addUser(name, email, uid, created_at);
+                        System.out.println("The group is :" + group);
+
+                        db.addUser(name, email, group, uid, created_at);
                         
                         // Launch main activity
                         Intent intent = new Intent(LoginActivity.this,

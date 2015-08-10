@@ -6,4 +6,4 @@
     <item android:state_selected="true" android:drawable="@drawable/day_selected"/>
 	<item android:drawable="@drawable/normal_day"/>
 </selector>
-<!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/extendedCalendarView/src/main/res/drawable/date_number_background.xml --><!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/extendedCalendarView/build/intermediates/bundles/debug/res/drawable/date_number_background.xml -->
+<!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/extendedCalendarView/src/main/res/drawable/date_number_background.xml --><!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/extendedCalendarView/build/intermediates/bundles/debug/res/drawable/date_number_background.xml -->

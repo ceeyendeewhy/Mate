@@ -110,10 +110,13 @@ import cindyliu96.test.SessionManager;
 import java.util.HashMap;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -127,17 +130,21 @@ public class MainActivity extends Activity {
     private SQLiteHandler db;
     private SessionManager session;
 
+    private Dialog dialog;
+    private Button addNewHome;
+    private Button joinHome;
+    private Button submitButton;
+    private Button cancelButton;
+    private Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        txtName = (TextView) findViewById(R.id.name);
-        txtEmail = (TextView) findViewById(R.id.email);
-        btnLogout = (Button) findViewById(R.id.btnLogout);
 
         // SqLite database handler
         db = new SQLiteHandler(getApplicationContext());
+
+        //delete database
+        //db.deleteUsers();
 
         // session manager
         session = new SessionManager(getApplicationContext());
@@ -149,17 +156,46 @@ public class MainActivity extends Activity {
         // Fetching user details from sqlite
         user = db.getUserDetails();
 
-        String name = user.get("name");
-        String email = user.get("email");
-
         //if the user does not already have a group, prompt the user to add to a group or create a new group
         if (user.get("group") == null) {
             System.out.println("THE USER DOES NOT BELONG TO A GROUP YET");
             //ask the user to either join an existing group or make a new one
+            //I will display the two options
+            setContentView(R.layout.edit_home);
+            joinHome = (Button) findViewById(R.id.joinExistingHome);
+            addNewHome = (Button) findViewById(R.id.createNewHome);
+
+            joinHome.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    joinExistingHome();
+                }
+            });
+
+            addNewHome.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    addHome();
+                }
+            });
         }
         if (user.get("group") != null) {
-
+            System.out.println("The user already belongs to a group");
+            //set to home screen layout
+            setContentView(R.layout.activity_main);
         }
+
+
+        txtName = (TextView) findViewById(R.id.name);
+        txtEmail = (TextView) findViewById(R.id.email);
+        btnLogout = (Button) findViewById(R.id.btnLogout);
+
+
+
+        String name = user.get("name");
+        String email = user.get("email");
+
+
 
         // Displaying the user details on the screen
         txtName.setText(name);
@@ -171,6 +207,55 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 logoutUser();
+            }
+        });
+    }
+
+    public void addHome() {
+        //make a new dialog popup and user can enter a new group name.
+        dialog = new Dialog(context);
+        dialog.setContentView(R.layout.set_home_dialog);
+        dialog.setTitle("Add a new home");
+        dialog.show();
+
+        cancelButton = (Button) dialog.findViewById(R.id.cancel);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        submitButton = (Button) dialog.findViewById(R.id.submitEvent);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.dismiss();
+            }
+        });
+    }
+
+    public void joinExistingHome() {
+        //new dialog appears and prompt user to enter existing group name
+        //make a new dialog popup and user can enter a new group name.
+        dialog = new Dialog(context);
+        dialog.setContentView(R.layout.set_home_dialog);
+        dialog.setTitle("Enter existing home");
+        dialog.show();
+
+        cancelButton = (Button) dialog.findViewById(R.id.cancel);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        submitButton = (Button) dialog.findViewById(R.id.submitEvent);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.dismiss();
             }
         });
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml -->
+    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml -->
     <eat-comment/>
     <dimen name="day_margin">24dp</dimen>
     <dimen name="first_day_margin">10dp</dimen>

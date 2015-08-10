@@ -16,7 +16,7 @@
     <string name="submit">Submit</string>
 
 
-
+    <string name="findMates">Find your mates</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="hint_name">Fullname</string>

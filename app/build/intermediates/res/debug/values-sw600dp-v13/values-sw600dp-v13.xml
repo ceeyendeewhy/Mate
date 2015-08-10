@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-sw600dp-v13/values.xml -->
+    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-sw600dp-v13/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">24dp</dimen>
     <dimen name="abc_action_bar_default_height_material">64dp</dimen>
@@ -10,13 +10,13 @@
     <dimen name="abc_config_prefDialogWidth">580dp</dimen>
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/app/build/intermediates/exploded-aar/Test/extendedCalendarView/unspecified/res/values-sw600dp-v13/values-sw600dp-v13.xml -->
+    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/Mate/extendedCalendarView/unspecified/res/values-sw600dp-v13/values-sw600dp-v13.xml -->
     <eat-comment/>
     <dimen name="day_margin">59dp</dimen>
     <dimen name="min_cell_height">50dp</dimen>
     <dimen name="min_cell_width">50dp</dimen>
     <dimen name="text_height_width">30dp</dimen>
-    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-sw600dp-v13/values.xml -->
+    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-sw600dp-v13/values.xml -->
     <eat-comment/>
     <integer name="abc_max_action_buttons">5</integer>
 </resources>

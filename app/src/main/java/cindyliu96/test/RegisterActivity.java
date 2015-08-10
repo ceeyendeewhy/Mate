@@ -130,11 +130,13 @@ public class RegisterActivity extends Activity {
                         JSONObject user = jObj.getJSONObject("user");
                         String name = user.getString("name");
                         String email = user.getString("email");
+                        String group = user.getString("group");
                         String created_at = user
                                 .getString("created_at");
 
+
                         // Inserting row in users table
-                        db.addUser(name, email, uid, created_at);
+                        db.addUser(name, email, group, uid, created_at);
 
                         // Launch login activity
                         Intent intent = new Intent(
@@ -173,6 +175,7 @@ public class RegisterActivity extends Activity {
                 params.put("tag", "register");
                 params.put("name", name);
                 params.put("email", email);
+                params.put("user_group", "");
                 params.put("password", password);
 
                 return params;

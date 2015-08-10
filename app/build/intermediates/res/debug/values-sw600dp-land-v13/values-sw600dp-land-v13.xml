@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Test/app/build/intermediates/exploded-aar/Test/extendedCalendarView/unspecified/res/values-sw600dp-land-v13/values-sw600dp-land-v13.xml -->
+    <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/Mate/extendedCalendarView/unspecified/res/values-sw600dp-land-v13/values-sw600dp-land-v13.xml -->
     <eat-comment/>
     <dimen name="day_margin">110dp</dimen>
     <dimen name="min_cell_height">75dp</dimen>
