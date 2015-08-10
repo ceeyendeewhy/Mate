@@ -79,6 +79,19 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         Log.d(TAG, "New user inserted into sqlite: " + id);
     }
 
+    //updating sqlite database with the group name
+    public void updateUserGroup(String groupName) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_GROUP, groupName);
+        HashMap<String, String> user = getUserDetails();
+        String userID = user.get("uid");
+
+        System.out.println("User id is: " + userID);
+
+        db.update(TABLE_LOGIN, values, SQLiteHandler.KEY_UID + "=\"" + userID + "\"", null);
+    }
+
     /**
      * Getting user data from database
      * */
@@ -98,7 +111,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
             user.put("created_at", cursor.getString(5));
         }
         cursor.close();
-        db.close();
+        //db.close();
         // return user
         Log.d(TAG, "Fetching user from Sqlite: " + user.toString());
 

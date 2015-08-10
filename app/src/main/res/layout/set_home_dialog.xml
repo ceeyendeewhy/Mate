@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
     <EditText
-        android:id="@+id/title"
+        android:id="@+id/group"
         android:layout_width="@dimen/edit_text_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

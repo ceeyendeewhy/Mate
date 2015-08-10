@@ -4,6 +4,7 @@
     package="cindyliu96.test" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <application
         android:name="cindyliu96.test.AppController"
         android:allowBackup="true"

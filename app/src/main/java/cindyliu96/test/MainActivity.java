@@ -229,7 +229,12 @@ public class MainActivity extends Activity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EditText groupName = (EditText) dialog.findViewById(R.id.group);
+                String name = groupName.getText().toString();
+                System.out.println("Name of group is: " + name);
+                db.updateUserGroup(name);
 
+                System.out.println("user group: " + db.getUserDetails().get("user_group"));
                 dialog.dismiss();
             }
         });
