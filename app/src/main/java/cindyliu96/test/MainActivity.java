@@ -295,31 +295,30 @@ public class MainActivity extends Activity {
                                 Log.e(TAG, "Update Error: " + error.getMessage());
                                 Toast.makeText(getApplicationContext(),
                                         error.getMessage(), Toast.LENGTH_LONG).show();
-//                hideDialog();
+//                hideDialog();ooo
                             }
                         }) {
-                            String uid = db.getUserDetails().get("uid");
+                            String email = db.getUserDetails().get("email");
                             @Override
                             protected Map<String, String> getParams() {
+                                System.out.println("trying to return params");
                                 // Posting params to register url
-                                Map<String, String> params = new HashMap<String, String>();
+                                Map<String, String> params = new HashMap<>();
                                 params.put("tag", "update");
                                 params.put("user_group", name);
-                                params.put("uid", uid);
-
+                                params.put("email", email);
                                 return params;
                             }
-
                         };
                         System.out.println("updating group to mysql database");
                         // Adding request to request queue
                         AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
-                System.out.println("here1");
-                System.out.println("user group: " + db.getUserDetails().get("user_group"));
+//                System.out.println("here1");
+//                System.out.println("user group: " + db.getUserDetails().get("user_group"));
                 dialog.dismiss();
                     }
         });
-        System.out.println("here2");
+        //System.out.println("here2");
     }
 
     public void joinExistingHome() {
