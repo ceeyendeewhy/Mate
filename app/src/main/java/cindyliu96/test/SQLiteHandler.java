@@ -12,6 +12,7 @@ import android.util.Log;
  * Created by yunjie on 8/7/2015.
  */
 public class SQLiteHandler extends SQLiteOpenHelper {
+
     private static final String TAG = SQLiteHandler.class.getSimpleName();
 
     // All Static variables
@@ -58,38 +59,41 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+
     /**
      * Storing user details in database
      * */
-    public void addUser(String name, String email, String group, String uid, String created_at) {
+    public void addUser(String name, String email, String uid, String created_at) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, name); // Name
         values.put(KEY_EMAIL, email); // Email
-        values.put(KEY_GROUP, group);
-        System.out.println("The group is: " + group);
+        values.putNull(KEY_GROUP);
         values.put(KEY_UID, uid);
         values.put(KEY_CREATED_AT, created_at); // Created At
 
         // Inserting Row
         long id = db.insert(TABLE_LOGIN, null, values);
-        db.close(); // Closing database connection
+        //db.close(); // Closing database connection
 
         Log.d(TAG, "New user inserted into sqlite: " + id);
     }
 
     //updating sqlite database with the group name
     public void updateUserGroup(String groupName) {
+
         SQLiteDatabase db = this.getWritableDatabase();
+
+
         ContentValues values = new ContentValues();
         values.put(KEY_GROUP, groupName);
         HashMap<String, String> user = getUserDetails();
         String userID = user.get("uid");
 
         System.out.println("User id is: " + userID);
-
-        db.update(TABLE_LOGIN, values, SQLiteHandler.KEY_UID + "=\"" + userID + "\"", null);
+        int i = db.update(TABLE_LOGIN, values, SQLiteHandler.KEY_UID + "=\"" + userID + "\"", null);
+        db.close();
     }
 
     /**

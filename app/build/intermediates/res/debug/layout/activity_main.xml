@@ -104,18 +104,6 @@
             android:layout_height="wrap_content"
             android:textSize="13dp" />
 
-        <Button
-            android:id="@+id/joinExistingGroup"
-            android:layout_marginTop="40dp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/join_existing_home"/>
-
-        <Button
-            android:id="@+id/createNewHome"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_new_home"/>
 
         <Button
             android:id="@+id/btnLogout"

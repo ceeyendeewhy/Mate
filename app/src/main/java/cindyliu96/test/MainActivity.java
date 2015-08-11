@@ -108,19 +108,30 @@ import cindyliu96.test.SQLiteHandler;
 import cindyliu96.test.SessionManager;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends Activity {
-
+    private static final String TAG = RegisterActivity.class.getSimpleName();
     private TextView txtName;
     private TextView txtEmail;
     private Button btnLogout;
@@ -157,7 +168,7 @@ public class MainActivity extends Activity {
         user = db.getUserDetails();
 
         //if the user does not already have a group, prompt the user to add to a group or create a new group
-        if (user.get("group") == null) {
+        if (user.get("user_group") == null || user.get("user_group").trim().length() == 0) {
             System.out.println("THE USER DOES NOT BELONG TO A GROUP YET");
             //ask the user to either join an existing group or make a new one
             //I will display the two options
@@ -179,8 +190,11 @@ public class MainActivity extends Activity {
                 }
             });
         }
-        if (user.get("group") != null) {
+        if (user.get("user_group") != null) {
             System.out.println("The user already belongs to a group");
+            System.out.println("The user belongs to group: " + user.get("user_group"));
+            System.out.println("The user's group is null: " + (user.get("user_group") == "null"));
+            System.out.println("hi");
             //set to home screen layout
             setContentView(R.layout.activity_main);
         }
@@ -225,19 +239,87 @@ public class MainActivity extends Activity {
                 dialog.dismiss();
             }
         });
-        submitButton = (Button) dialog.findViewById(R.id.submitEvent);
+        submitButton = (Button) dialog.findViewById(R.id.submitGroup);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText groupName = (EditText) dialog.findViewById(R.id.group);
-                String name = groupName.getText().toString();
+                final String name = groupName.getText().toString();
                 System.out.println("Name of group is: " + name);
-                db.updateUserGroup(name);
+                updateUser(name);
+                       System.out.println("Trying to update user group");
+                        if (!name.isEmpty()) {
 
+                            //add to sqlite database
+                            updateUser(name);
+                        } else {
+                            Toast.makeText(getApplicationContext(),
+                                    "Please enter your details!", Toast.LENGTH_LONG)
+                                    .show();
+                        }
+                        String tag_string_req = "req_update";
+
+                        //showDialog();
+
+                        StringRequest strReq = new StringRequest(Request.Method.POST,
+                                AppConfig.URL_REGISTER, new Response.Listener<String>() {
+
+                            @Override
+                            public void onResponse(String response) {
+                                Log.d(TAG, "Update Response: " + response.toString());
+                                //hideDialog();
+
+                                try {
+                                    JSONObject jObj = new JSONObject(response);
+                                    boolean error = jObj.getBoolean("error");
+                                    if (!error) {
+                                        System.out.println("User group successfully updated in mysql");
+                                        // User successfully stored in MySQL
+                                    } else {
+                                        System.out.println("The use group failed to update");
+                                        // Error occurred in registration. Get the error
+                                        // message
+                                        String errorMsg = jObj.getString("error_msg");
+                                        Toast.makeText(getApplicationContext(),
+                                                errorMsg, Toast.LENGTH_LONG).show();
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        }, new Response.ErrorListener() {
+
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Log.e(TAG, "Update Error: " + error.getMessage());
+                                Toast.makeText(getApplicationContext(),
+                                        error.getMessage(), Toast.LENGTH_LONG).show();
+//                hideDialog();
+                            }
+                        }) {
+                            String uid = db.getUserDetails().get("uid");
+                            @Override
+                            protected Map<String, String> getParams() {
+                                // Posting params to register url
+                                Map<String, String> params = new HashMap<String, String>();
+                                params.put("tag", "update");
+                                params.put("user_group", name);
+                                params.put("uid", uid);
+
+                                return params;
+                            }
+
+                        };
+                        System.out.println("updating group to mysql database");
+                        // Adding request to request queue
+                        AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
+                System.out.println("here1");
                 System.out.println("user group: " + db.getUserDetails().get("user_group"));
                 dialog.dismiss();
-            }
+                    }
         });
+        System.out.println("here2");
     }
 
     public void joinExistingHome() {
@@ -263,6 +345,16 @@ public class MainActivity extends Activity {
                 dialog.dismiss();
             }
         });
+    }
+
+    public void updateUser(String groupName) {
+        db = new SQLiteHandler(getApplicationContext());
+        HashMap<String, String> userDetails = db.getUserDetails();
+        String uid = userDetails.get("uid");
+        System.out.println("group name: " + groupName);
+
+        db.updateUserGroup(groupName);
+        db.close();
     }
 
     /**

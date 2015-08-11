@@ -34,15 +34,15 @@ public final class R {
 		public static final int today = 0x7f020048;
 	}
 	public static final class id {
-		public static final int imageView1 = 0x7f0c0063;
-		public static final int imageView2 = 0x7f0c0065;
-		public static final int imageView3 = 0x7f0c0066;
-		public static final int imageView4 = 0x7f0c0064;
-		public static final int imageView5 = 0x7f0c0067;
-		public static final int imageView6 = 0x7f0c0068;
-		public static final int rl = 0x7f0c0061;
-		public static final int textView1 = 0x7f0c0060;
-		public static final int today_frame = 0x7f0c0062;
+		public static final int imageView1 = 0x7f0c0061;
+		public static final int imageView2 = 0x7f0c0063;
+		public static final int imageView3 = 0x7f0c0064;
+		public static final int imageView4 = 0x7f0c0062;
+		public static final int imageView5 = 0x7f0c0065;
+		public static final int imageView6 = 0x7f0c0066;
+		public static final int rl = 0x7f0c005f;
+		public static final int textView1 = 0x7f0c005e;
+		public static final int today_frame = 0x7f0c0060;
 	}
 	public static final class layout {
 		public static final int day_of_week = 0x7f04001e;
