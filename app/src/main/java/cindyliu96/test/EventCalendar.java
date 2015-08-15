@@ -36,6 +36,12 @@ import android.os.Handler;
 import android.widget.TimePicker;
 
 
+
+
+
+
+
+
 public class EventCalendar extends ListActivity {
     public Day clickedDay;
     ArrayList itemsList;
@@ -45,6 +51,7 @@ public class EventCalendar extends ListActivity {
     private EventAdapter eventAdapter;
 
     Dialog dialog;
+    private String user;
     EditText eventTitle;
     EditText eventDescription;
     EditText startTime;
@@ -133,11 +140,12 @@ public class EventCalendar extends ListActivity {
                         @Override
                         public void onClick(View v) {
                             System.out.println("adding new event");
+                            user = MainActivity.username;
                             eventTitle = (EditText) dialog.findViewById(R.id.title);
                             eventDescription = (EditText) dialog.findViewById(R.id.description);
                             startTime = (EditText) dialog.findViewById(R.id.startTime);
                             endTime = (EditText) dialog.findViewById(R.id.endTime);
-                            addEvent(eventTitle.getText().toString(), eventDescription.getText().toString(), clickedDay.getYear(), clickedDay.getMonth(), clickedDay.getDay(),
+                            addEvent(user, eventTitle.getText().toString(), eventDescription.getText().toString(), clickedDay.getYear(), clickedDay.getMonth(), clickedDay.getDay(),
                                     startHour, startMinute, endHour, endMinute);
                             dialog.dismiss();
                             calendar.refreshCalendar();
@@ -152,13 +160,15 @@ public class EventCalendar extends ListActivity {
         //System.out.println("Rows deleted" + getContentResolver().delete(CalendarProvider.CONTENT_URI, null, null));
     }
 
-    public void addEvent(String eventTitle, String eventDescription, int year, int month, int day, int sHour, int sMinute, int eHour, int eMinute) {
+    public void addEvent(String userName, String eventTitle, String eventDescription, int year, int month, int day, int sHour, int sMinute, int eHour, int eMinute) {
         // Adding events
         ContentValues values = new ContentValues();
         values.put(CalendarProvider.COLOR, Event.COLOR_BLUE);
         values.put(CalendarProvider.DESCRIPTION, eventDescription);
         values.put(CalendarProvider.EVENT, eventTitle);
+        values.put(CalendarProvider.USER, userName);
 
+        System.out.println("User: " + userName);
         System.out.println("Event title: " + eventTitle);
         System.out.println("Event description: " + eventDescription);
         System.out.println("Year: " + year);
@@ -197,22 +207,39 @@ public class EventCalendar extends ListActivity {
         myTimePicker = new TimePickerDialog(context, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                if (startTimeSelected) {
-                    startHour = selectedHour;
-                    startMinute = selectedMinute;
-                    startTime.setText(selectedHour + ":" + selectedMinute);
+                String am_pm;
+                if (selectedHour < 12) {
+                    am_pm = "am";
                 } else {
+                    am_pm = "pm";
+                }
+                if (startTimeSelected) {
+                    if (startHour > 12) {
+                        startHour = selectedHour - 12;
+                    } else if (startHour == 0) {
+                        startHour = 12;
+                    } else {
+                        startHour = selectedHour;
+                    }
+                    startMinute = selectedMinute;
+                    startTime.setText(startHour + ":" + selectedMinute + am_pm);
+                } else {
+                    if (endHour > 12) {
+                        endHour = selectedHour - 12;
+                    } else if (endHour == 0) {
+                        endHour = 12;
+                    } else {
+                        endHour = selectedHour;
+                    }
                     endHour = selectedHour;
                     endMinute = selectedMinute;
-                    endTime.setText(selectedHour + ":" + selectedMinute);
+                    endTime.setText(endHour + ":" + selectedMinute + am_pm);
                 }
             }
         }, hour, minute, true);
         myTimePicker.setTitle("Select start time");
         myTimePicker.show();
     }
-
-
 
     private void getScheduleDetails(Day day) {
         itemsList = new ArrayList();
@@ -221,7 +248,6 @@ public class EventCalendar extends ListActivity {
             itemsList.add(e);
         }
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -243,6 +269,4 @@ public class EventCalendar extends ListActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }

@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 public class Event {
 	
 	private int color;
+	private String user;
 	private String name;
 	private String description;
 	private String location;
@@ -36,6 +37,14 @@ public class Event {
 	
 	public void setColor(int color){
 		this.color = color;
+	}
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String userName) {
+		this.user = userName;
 	}
 	
 	/**

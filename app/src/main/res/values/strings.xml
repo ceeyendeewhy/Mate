@@ -15,16 +15,18 @@
     <string name="cancel">Cancel</string>
     <string name="submit">Submit</string>
 
-
+    <string name="title_activity_pay_pal_selection">PayPal_selection</string>
+    <string name="title_activity_pay_pal_sdk">PayPal_sdk</string>
     <string name="findMates">Find your mates</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="hint_name">Fullname</string>
+    <string name="fa_home">&#xf015;</string>
     <string name="btn_login">LOGIN</string>
     <string name="btn_register">REGISTER</string>
     <string name="btn_link_to_register">Not a member? Sign up now.</string>
-    <string name="btn_link_to_login">Already registred! Login Me.</string>
-    <string name="welcome">Welcome home, mate</string>
+    <string name="btn_link_to_login">Already registered? Login here!</string>
+    <string name="welcome">Welcome home,</string>
     <string name="btn_logout">LOGOUT</string>
     <string name="btn_calendar">CALENDAR</string>
     <string name="btn_bills">PAY BILLS</string>

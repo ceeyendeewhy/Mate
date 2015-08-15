@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.tyczj.extendedcalendarview.Event;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 /**
@@ -30,14 +33,19 @@ public class EventAdapter extends ArrayAdapter<Event> {
 
         Event e = events.get(position);
 
-        //TextView username = (TextView) v.findViewById(R.id.username);
+        TextView userName = (TextView) v.findViewById(R.id.userName);
         TextView eventName = (TextView) v.findViewById(R.id.eventTitle);
         TextView eventDescription = (TextView) v.findViewById(R.id.eventDescription);
         TextView time = (TextView) v.findViewById(R.id.time);
+        TextView secondTime = (TextView) v.findViewById(R.id.secondTime);
 
 //        if (username != null) {
 //            username.setText("Name");
 //        }
+
+        System.out.println("The user who made this event is: " + e.getUser());
+
+        userName.setText(e.getUser());
         if (eventName != null) {
             eventName.setText(e.getTitle());
         }
@@ -45,7 +53,11 @@ public class EventAdapter extends ArrayAdapter<Event> {
             eventDescription.setText(e.getDescription());
         }
         if (time != null) {
-            time.setText(e.getStartDate("hh:mm" + " - " + e.getEndDate("hh:mm")));
+            time.setText(e.getStartDate("h:mm a"));
+        }
+
+        if (secondTime != null) {
+            secondTime.setText(" - " + e.getEndDate("h:mm a"));
         }
         return v;
     }

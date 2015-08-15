@@ -16,25 +16,11 @@
         <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\classes-74359e967fa401cae1db2a0e9202ba3a7b98de49.jar" />
     </item>
     <item
-        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\libs\volley.jar"
+        jar="C:\Users\yunjie\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\volley-6b2dc8b957b7c1162519fe0f83404d6193454f57.jar" />
-    </item>
-    <item
-        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\exploded-aar\Mate\extendedCalendarView\unspecified\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="09f76377e502d327729e96c050cbbe9df78bc5f4">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\classes-86f4fcb73c4d27c7b0bb86da71f209a0f418c49f.jar" />
-    </item>
-    <item
-        jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-6a8c175c0f99cb65a3f4a9554a8dc004ff6ba621.jar" />
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-7702ed0896b0da04572e768d5d40e79194275c77.jar" />
     </item>
     <item
         jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\libs\volley.jar"
@@ -44,11 +30,18 @@
         <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\volley-af4a57cb7504788073084edd0e66f314f390adf1.jar" />
     </item>
     <item
-        jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\exploded-aar\Test\extendedCalendarView\unspecified\jars\classes.jar"
+        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\libs\volley.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="dd8d0c5534cf467600ef1829a83525b13f2a434f">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\classes-2390e87ac4a89c0cf04fd0dee46378a25d87c289.jar" />
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\volley-6b2dc8b957b7c1162519fe0f83404d6193454f57.jar" />
+    </item>
+    <item
+        jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-6a8c175c0f99cb65a3f4a9554a8dc004ff6ba621.jar" />
     </item>
     <item
         jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.1\jars\classes.jar"
@@ -58,25 +51,25 @@
         <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\classes-d5f195da917db8c642d9e63e1799bd32ae2438e6.jar" />
     </item>
     <item
-        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\exploded-aar\Test\extendedCalendarView\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\classes-c1e54c3e808ea92f2de396bcde1315b2419ad05b.jar" />
+        sha1="dd8d0c5534cf467600ef1829a83525b13f2a434f">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\classes-2390e87ac4a89c0cf04fd0dee46378a25d87c289.jar" />
     </item>
     <item
-        jar="C:\Users\yunjie\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\exploded-aar\Mate\extendedCalendarView\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-7702ed0896b0da04572e768d5d40e79194275c77.jar" />
+        sha1="4d1afc6194a95e8c316527f5c9ba133406c7b9f7">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\classes-86f4fcb73c4d27c7b0bb86da71f209a0f418c49f.jar" />
     </item>
     <item
-        jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\classes-98d111ba573c09df221f06e2b8828441bdc66182.jar" />
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\classes-fdb8f5e0b2a1d7e8db2260d015004461952778ba.jar" />
     </item>
     <item
         jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
@@ -86,11 +79,32 @@
         <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-c802dbccbed6a14194b083cd7e6ead0ac6fcefab.jar" />
     </item>
     <item
-        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
+        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\classes-fdb8f5e0b2a1d7e8db2260d015004461952778ba.jar" />
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\classes-c1e54c3e808ea92f2de396bcde1315b2419ad05b.jar" />
+    </item>
+    <item
+        jar="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Test\app\build\intermediates\pre-dexed\debug\classes-98d111ba573c09df221f06e2b8828441bdc66182.jar" />
+    </item>
+    <item
+        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\libs\PayPalAndroidSDK-2.8.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="dac002470615f5946a86451284ab8f43611ce8b9">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\PayPalAndroidSDK-2.8.5-dd46638a1ed44460538d48e8e28330b767dc595e.jar" />
+    </item>
+    <item
+        jar="C:\Users\yunjie\AndroidStudioProjects\Mate\app\libs\PayPal_MPL.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7322c3ef85eea27ec806b742a52f067676fab173">
+        <dex dex="C:\Users\yunjie\AndroidStudioProjects\Mate\app\build\intermediates\pre-dexed\debug\PayPal_MPL-397cb9735eb57b7a380c0ba705d1e22d5ebfb052.jar" />
     </item>
 
 </items>

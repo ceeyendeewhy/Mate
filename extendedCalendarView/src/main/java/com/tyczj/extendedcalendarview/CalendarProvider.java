@@ -27,7 +27,8 @@ public class CalendarProvider extends ContentProvider {
 	public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/events");
 	public static final Uri CONTENT_ID_URI_BASE = Uri.parse("content://" + AUTHORITY + "/events/");
 	private static final UriMatcher uriMatcher;
-	
+
+	public static final String USER = "userName";
 	public static final String EVENT = "event";
 	public static final String LOCATION = "location";
 	public static final String DESCRIPTION = "description";
@@ -68,8 +69,8 @@ public class CalendarProvider extends ContentProvider {
         
     	private void createTables(SQLiteDatabase db){
     		db.execSQL("CREATE TABLE " + EVENTS_TABLE + "(" + ID + " integer primary key autoincrement, " +
-    				EVENT + " TEXT, " + LOCATION + " TEXT, " + DESCRIPTION + " TEXT, "
-    				+ START + " INTEGER, "+ END + " INTEGER, " + START_DAY + " INTEGER, " + END_DAY + " INTEGER, " + COLOR +" INTEGER);");
+					EVENT + " TEXT, " + LOCATION + " TEXT, " + DESCRIPTION + " TEXT, "
+    				+ START + " INTEGER, "+ END + " INTEGER, " + START_DAY + " INTEGER, " + END_DAY + " INTEGER, " + COLOR + " INTEGER, " + USER + " TEXT);");
     	}
     }
 
@@ -96,7 +97,7 @@ public class CalendarProvider extends ContentProvider {
 
 	@Override
 	public Uri insert(Uri uri, ContentValues values) {
-		long rowID = db.insert(EVENTS_TABLE,null, values);
+		long rowID = db.insert(EVENTS_TABLE, null, values);
 		Uri _uri = null;
 		if(rowID > 0){
 			_uri = ContentUris.withAppendedId(CONTENT_ID_URI_BASE,rowID);
@@ -179,6 +180,7 @@ public class CalendarProvider extends ContentProvider {
 		mMap.put(START_DAY, START_DAY);
 		mMap.put(END_DAY, END_DAY);
 		mMap.put(COLOR, COLOR);
+		mMap.put(USER, USER);
 	}
 
 }

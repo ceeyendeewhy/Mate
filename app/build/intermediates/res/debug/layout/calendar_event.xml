@@ -15,7 +15,7 @@
         android:id="@+id/card_view"
         android:layout_gravity="center"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:layout_margin="5dp"
         card_view:cardCornerRadius="2dp"
         card_view:contentPadding="20dp">
@@ -25,16 +25,27 @@
             android:layout_height="fill_parent">
 
             <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textStyle="italic"
+                android:textColor="#70B8FF"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
                 android:id="@+id/eventTitle"
+                android:layout_below="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:textSize="20dp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/eventDescription"
+                android:layout_marginTop="4dp"
                 android:layout_below="@+id/eventTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,6 +57,15 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:textSize="15dp"
+                android:textColor="#3399FF"/>
+
+            <TextView
+                android:id="@+id/secondTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/time"
                 android:textSize="15dp"
                 android:textColor="#3399FF"/>
 

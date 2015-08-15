@@ -25,9 +25,9 @@
     <color name="background_material_light">#ffeeeeee</color>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="bg_login">#26ae90</color>
+    <color name="bg_login">#70DBFF</color>
     <color name="bg_main">#428bca</color>
-    <color name="bg_register">#2e3237</color>
+    <color name="bg_register">#476C91</color>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -38,9 +38,10 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/src/main/res/values/colors.xml -->
     <eat-comment/>
-    <color name="btn_login">#26ae90</color>
-    <color name="btn_login_bg">#eceef1</color>
-    <color name="btn_logut_bg">#ff6861</color>
+    <color name="btn_login">#ffffff</color>
+    <color name="btn_login_bg">#476C91</color>
+    <color name="btn_logut_bg">#7DDEFF</color>
+    <color name="btn_logutbg">#476C91</color>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="button_material_dark">#ff5a595b</color>
@@ -66,8 +67,8 @@
     <color name="input_login">#222222</color>
     <color name="input_login_hint">#999999</color>
     <color name="input_register">#888888</color>
-    <color name="input_register_bg">#3b4148</color>
-    <color name="input_register_hint">#5e6266</color>
+    <color name="input_register_bg">#ffffff</color>
+    <color name="input_register_hint">#999999</color>
     <color name="lbl_name">#333333</color>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
@@ -267,6 +268,7 @@
     <string name="enter_birthday">Birthday</string>
     <string name="enter_name">Name</string>
     <string name="enter_nickname">Nickname (optional)</string>
+    <string name="fa_home"></string>
     <string name="findMates">Find your mates</string>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/Mate/extendedCalendarView/unspecified/res/values/values.xml -->
     <eat-comment/>
@@ -297,13 +299,15 @@
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_event_calendar">EventCalendar</string>
+    <string name="title_activity_pay_pal_sdk">PayPal_sdk</string>
+    <string name="title_activity_pay_pal_selection">PayPal_selection</string>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/Mate/extendedCalendarView/unspecified/res/values/values.xml -->
     <eat-comment/>
     <string name="tuesday">TUE</string>
     <string name="wednesday">WED</string>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="welcome">Welcome home, mate</string>
+    <string name="welcome">Welcome home,</string>
     <!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

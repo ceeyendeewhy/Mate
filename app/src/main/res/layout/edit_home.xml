@@ -78,17 +78,15 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:gravity="center"
-        android:orientation="vertical" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:textSize="20dp" />
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp">
 
         <TextView
             android:id="@+id/name"
@@ -98,41 +96,57 @@
             android:textColor="@color/lbl_name"
             android:textSize="24dp" />
 
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13dp" />
-
-        <TextView
-            android:text="@string/findMates"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
         <Button
             android:id="@+id/joinExistingHome"
-            android:layout_marginTop="40dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/join_existing_home"/>
+            android:layout_marginTop="40dip"
+            android:background="#ffaaa4ac"
+            android:text="@string/join_existing_home"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
         <Button
             android:id="@+id/createNewHome"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_new_home"/>
-
+            android:background="#ffaaa4ac"
+            android:text="@string/add_new_home"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp" />
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dip"
             android:background="@color/btn_logut_bg"
             android:text="@string/btn_logout"
+            android:layout_marginTop="5dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15dp" />
 
     </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:src="@drawable/matelight"
+        android:layout_above="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get settled"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView3" />
+
 
 </RelativeLayout>

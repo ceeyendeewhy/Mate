@@ -46,10 +46,6 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day);
 	}
 
-//    public interface OnLongDayClickListener {
-//        public void onLongDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day);
-//    }
-
 	public ExtendedCalendarView(Context context) {
 		super(context);
 		this.context = context;

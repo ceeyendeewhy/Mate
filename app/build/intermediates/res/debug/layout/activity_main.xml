@@ -84,46 +84,46 @@
         android:gravity="center"
         android:orientation="vertical" >
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:src="@drawable/matedark"
+            android:layout_marginBottom="20dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/welcome"
-            android:textSize="20dp" />
+            android:textSize="30dp"
+            android:elegantTextHeight="false"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/name"
+            android:fontFamily="sans-serif-thin"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:textColor="@color/lbl_name"
-            android:textSize="24dp" />
+            android:textSize="40dp" />
 
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13dp" />
+        <!--<TextView-->
+            <!--android:id="@+id/email"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="13dp" />-->
 
 
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dip"
-            android:background="@color/btn_logut_bg"
-            android:text="@string/btn_logout"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
 
         <Button
             android:id="@+id/btnCalendar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
             android:background="@color/btn_logut_bg"
             android:text="@string/btn_calendar"
             android:textColor="@color/white"
-            android:layout_marginTop="5dp"
             android:onClick="goToCalendar"
             android:textSize="15dp" />
 
@@ -133,9 +133,23 @@
             android:layout_height="wrap_content"
             android:background="@color/btn_logut_bg"
             android:text="@string/btn_bills"
+            android:onClick="goToPayPal"
             android:textColor="@color/white"
             android:layout_marginTop="5dp"
             android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_logutbg"
+            android:text="@string/btn_logout"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
     </LinearLayout>
 
 </RelativeLayout><!-- From: file:/C:/Users/yunjie/AndroidStudioProjects/Mate/app/src/main/res/layout/activity_main.xml -->

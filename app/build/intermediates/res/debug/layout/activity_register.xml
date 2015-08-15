@@ -15,6 +15,12 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp" >
 
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="75dp"
+            android:src="@drawable/matelight"
+            android:layout_marginBottom="20dp" />
+
         <EditText
             android:id="@+id/name"
             android:layout_width="fill_parent"
@@ -61,7 +67,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="#ea4c88"
+            android:background="#70DBFF"
             android:text="@string/btn_register"
             android:textColor="@color/white" />
 

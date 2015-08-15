@@ -1,10 +1,12 @@
 package cindyliu96.test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -63,13 +65,13 @@ public class SQLiteHandler extends SQLiteOpenHelper {
     /**
      * Storing user details in database
      * */
-    public void addUser(String name, String email, String uid, String created_at) {
+    public void addUser(String name, String email, String user_group, String uid, String created_at) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, name); // Name
         values.put(KEY_EMAIL, email); // Email
-        values.putNull(KEY_GROUP);
+        values.put(KEY_GROUP, user_group);
         values.put(KEY_UID, uid);
         values.put(KEY_CREATED_AT, created_at); // Created At
 
@@ -95,6 +97,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         int i = db.update(TABLE_LOGIN, values, SQLiteHandler.KEY_UID + "=\"" + userID + "\"", null);
         db.close();
     }
+
 
     /**
      * Getting user data from database
